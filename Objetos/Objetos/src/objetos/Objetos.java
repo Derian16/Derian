@@ -21,7 +21,7 @@ public class Objetos extends Cuadrado {
         Scanner entrada = new Scanner(System.in);
         String opcion, desicion;
 
-        do {
+        
             do {
                 try {
                     System.out.println("Ingrese la medida del lado: ");
@@ -45,7 +45,9 @@ public class Objetos extends Cuadrado {
                     } else if (opcion.equals("2") || opcion.equalsIgnoreCase("cubo")) {
                         Cubo.CalcularVolumen();
                         Cubo.CalcularPerimetro();
-                    } else if (opcion.equals("4") || opcion.equalsIgnoreCase("salir")) {
+                    } else if(opcion.equals("3") || opcion.equalsIgnoreCase("cancelar")){
+                    Objetos.main(args);
+                    }else if (opcion.equals("4") || opcion.equalsIgnoreCase("salir")) {
                         System.exit(0);
                     }
                     
@@ -55,7 +57,7 @@ public class Objetos extends Cuadrado {
                     desicion = entrada.next();
                 } while (desicion.equals("1") || desicion.equalsIgnoreCase("menu de calculos") || desicion.equalsIgnoreCase("menú de cálculos"));
             } while (desicion.equals("2") || desicion.equalsIgnoreCase("pedir nueva medida de lado"));
-        } while (opcion.equals("3") || opcion.equalsIgnoreCase("cancelar"));
+        
 
         // TODO code application logic here
     }
